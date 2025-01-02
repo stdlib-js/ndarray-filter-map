@@ -41,32 +41,14 @@ limitations under the License.
 
 <!-- /.intro -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/ndarray-filter-map
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var filterMap = require( '@stdlib/ndarray-filter-map' );
+import filterMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-filter-map@deno/mod.js';
 ```
 
 #### filterMap( x\[, options], fcn\[, thisArg] )
@@ -76,9 +58,9 @@ Filters and maps elements in an input [ndarray][@stdlib/ndarray/ctor] to element
 <!-- eslint-disable max-len -->
 
 ```javascript
-var Float64Array = require( '@stdlib/array-float64' );
-var ndarray = require( '@stdlib/ndarray-ctor' );
-var ndarray2array = require( '@stdlib/ndarray-to-array' );
+import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
+import ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-ctor@deno/mod.js';
+import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@deno/mod.js';
 
 function fcn( z ) {
     if ( z > 5.0 ) {
@@ -118,10 +100,10 @@ By default, the output ndarray [data type][@stdlib/ndarray/dtypes] is inferred f
 <!-- eslint-disable max-len -->
 
 ```javascript
-var Float64Array = require( '@stdlib/array-float64' );
-var ndarray = require( '@stdlib/ndarray-ctor' );
-var dtype = require( '@stdlib/ndarray-dtype' );
-var ndarray2array = require( '@stdlib/ndarray-to-array' );
+import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
+import ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-ctor@deno/mod.js';
+import dtype from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-dtype@deno/mod.js';
+import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@deno/mod.js';
 
 function fcn( z ) {
     if ( z > 5.0 ) {
@@ -155,9 +137,9 @@ To set the callback function execution context, provide a `thisArg`.
 <!-- eslint-disable no-invalid-this, max-len -->
 
 ```javascript
-var Float64Array = require( '@stdlib/array-float64' );
-var ndarray = require( '@stdlib/ndarray-ctor' );
-var ndarray2array = require( '@stdlib/ndarray-to-array' );
+import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
+import ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-ctor@deno/mod.js';
+import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@deno/mod.js';
 
 function fcn( z ) {
     this.count += 1;
@@ -206,10 +188,10 @@ The callback function is provided the following arguments:
     <!-- eslint-disable max-len -->
 
     ```javascript
-    var Float64Array = require( '@stdlib/array-float64' );
-    var ndarray = require( '@stdlib/ndarray-ctor' );
-    var Complex128 = require( '@stdlib/complex-float64-ctor' );
-    var ndarray2array = require( '@stdlib/ndarray-to-array' );
+    import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
+    import ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-ctor@deno/mod.js';
+    import Complex128 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-ctor@deno/mod.js';
+    import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@deno/mod.js';
 
     function fcn( z ) {
         if ( z > 5.0 ) {
@@ -247,10 +229,10 @@ The callback function is provided the following arguments:
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
-var ndarray2array = require( '@stdlib/ndarray-to-array' );
-var array = require( '@stdlib/ndarray-array' );
-var filterMap = require( '@stdlib/ndarray-filter-map' );
+import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@deno/mod.js';
+import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@deno/mod.js';
+import array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-array@deno/mod.js';
+import filterMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-filter-map@deno/mod.js';
 
 function fcn( v ) {
     if ( v > 0 ) {
@@ -299,7 +281,7 @@ console.log( ndarray2array( y ) );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -362,21 +344,21 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/ndarray-filter-map/main/LICENSE
 
-[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor
+[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor/tree/deno
 
-[@stdlib/ndarray/dtypes]: https://github.com/stdlib-js/ndarray-dtypes
+[@stdlib/ndarray/dtypes]: https://github.com/stdlib-js/ndarray-dtypes/tree/deno
 
-[@stdlib/ndarray/orders]: https://github.com/stdlib-js/ndarray-orders
+[@stdlib/ndarray/orders]: https://github.com/stdlib-js/ndarray-orders/tree/deno
 
 <!-- <related-links> -->
 
-[@stdlib/ndarray/filter]: https://github.com/stdlib-js/ndarray-filter
+[@stdlib/ndarray/filter]: https://github.com/stdlib-js/ndarray-filter/tree/deno
 
-[@stdlib/ndarray/map]: https://github.com/stdlib-js/ndarray-map
+[@stdlib/ndarray/map]: https://github.com/stdlib-js/ndarray-map/tree/deno
 
-[@stdlib/ndarray/reject]: https://github.com/stdlib-js/ndarray-reject
+[@stdlib/ndarray/reject]: https://github.com/stdlib-js/ndarray-reject/tree/deno
 
-[@stdlib/ndarray/slice]: https://github.com/stdlib-js/ndarray-slice
+[@stdlib/ndarray/slice]: https://github.com/stdlib-js/ndarray-slice/tree/deno
 
 <!-- </related-links> -->
 
