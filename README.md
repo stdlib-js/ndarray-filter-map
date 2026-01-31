@@ -48,6 +48,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import filterMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-filter-map@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/ndarray-filter-map/tags). For example,
+
+```javascript
 import filterMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-filter-map@v0.1.0-esm/index.mjs';
 ```
 
@@ -224,7 +229,7 @@ The callback function is provided the following arguments:
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@esm/index.mjs';
 import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@esm/index.mjs';
 import array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-array@esm/index.mjs';
-import filterMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-filter-map@v0.1.0-esm/index.mjs';
+import filterMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-filter-map@esm/index.mjs';
 
 function fcn( v ) {
     if ( v > 0 ) {
