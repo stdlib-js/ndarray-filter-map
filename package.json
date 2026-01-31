@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/ndarray-filter-map",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Filter and map elements in an input ndarray to elements in a new output ndarray according to a callback function.",
   "license": "Apache-2.0",
   "author": {
@@ -42,7 +42,7 @@
     "@stdlib/assert-is-function": "^0.2.2",
     "@stdlib/assert-is-ndarray-like": "^0.2.2",
     "@stdlib/assert-is-plain-object": "^0.2.2",
-    "@stdlib/blas-base-gcopy": "^0.2.1",
+    "@stdlib/blas-base-gcopy": "^0.2.2",
     "@stdlib/ndarray-base-assert-is-order": "^0.2.2",
     "@stdlib/ndarray-base-buffer-ctors": "^0.3.0",
     "@stdlib/ndarray-base-next-cartesian-index": "^0.2.2",
@@ -106,7 +106,6 @@
     "for-each",
     "apply"
   ],
-  "__stdlib__": {},
   "funding": {
     "type": "opencollective",
     "url": "https://opencollective.com/stdlib"
