@@ -41,19 +41,32 @@ limitations under the License.
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/ndarray-filter-map
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import filterMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-filter-map@esm/index.mjs';
-```
-The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/ndarray-filter-map/tags). For example,
-
-```javascript
-import filterMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-filter-map@v0.1.0-esm/index.mjs';
+var filterMap = require( '@stdlib/ndarray-filter-map' );
 ```
 
 #### filterMap( x\[, options], fcn\[, thisArg] )
@@ -63,8 +76,8 @@ Filters and maps elements in an input [ndarray][@stdlib/ndarray/ctor] to element
 <!-- eslint-disable max-len -->
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
-import ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-ctor@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
+var ndarray = require( '@stdlib/ndarray-ctor' );
 
 function fcn( z ) {
     if ( z > 5.0 ) {
@@ -101,9 +114,9 @@ By default, the output ndarray [data type][@stdlib/ndarray/dtypes] is inferred f
 <!-- eslint-disable max-len -->
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
-import ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-ctor@esm/index.mjs';
-import dtype from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-dtype@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
+var ndarray = require( '@stdlib/ndarray-ctor' );
+var dtype = require( '@stdlib/ndarray-dtype' );
 
 function fcn( z ) {
     if ( z > 5.0 ) {
@@ -134,8 +147,8 @@ To set the callback function execution context, provide a `thisArg`.
 <!-- eslint-disable no-invalid-this, max-len -->
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
-import ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-ctor@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
+var ndarray = require( '@stdlib/ndarray-ctor' );
 
 function fcn( z ) {
     this.count += 1;
@@ -181,9 +194,9 @@ The callback function is provided the following arguments:
     <!-- eslint-disable max-len -->
 
     ```javascript
-    import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
-    import ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-ctor@esm/index.mjs';
-    import Complex128 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-ctor@esm/index.mjs';
+    var Float64Array = require( '@stdlib/array-float64' );
+    var ndarray = require( '@stdlib/ndarray-ctor' );
+    var Complex128 = require( '@stdlib/complex-float64-ctor' );
 
     function fcn( z ) {
         if ( z > 5.0 ) {
@@ -220,16 +233,11 @@ The callback function is provided the following arguments:
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@esm/index.mjs';
-import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@esm/index.mjs';
-import array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-array@esm/index.mjs';
-import filterMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-filter-map@esm/index.mjs';
+```javascript
+var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
+var ndarray2array = require( '@stdlib/ndarray-to-array' );
+var array = require( '@stdlib/ndarray-array' );
+var filterMap = require( '@stdlib/ndarray-filter-map' );
 
 function fcn( v ) {
     if ( v > 0 ) {
@@ -248,10 +256,6 @@ console.log( ndarray2array( x ) );
 
 var y = filterMap( x, fcn );
 console.log( ndarray2array( y ) );
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -282,7 +286,7 @@ console.log( ndarray2array( y ) );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -312,8 +316,8 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/ndarray-filter-map.svg
 [npm-url]: https://npmjs.org/package/@stdlib/ndarray-filter-map
 
-[test-image]: https://github.com/stdlib-js/ndarray-filter-map/actions/workflows/test.yml/badge.svg?branch=v0.1.0
-[test-url]: https://github.com/stdlib-js/ndarray-filter-map/actions/workflows/test.yml?query=branch:v0.1.0
+[test-image]: https://github.com/stdlib-js/ndarray-filter-map/actions/workflows/test.yml/badge.svg?branch=v0.1.1
+[test-url]: https://github.com/stdlib-js/ndarray-filter-map/actions/workflows/test.yml?query=branch:v0.1.1
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/ndarray-filter-map/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/ndarray-filter-map?branch=main
@@ -345,21 +349,21 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/ndarray-filter-map/main/LICENSE
 
-[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor/tree/esm
+[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor
 
-[@stdlib/ndarray/dtypes]: https://github.com/stdlib-js/ndarray-dtypes/tree/esm
+[@stdlib/ndarray/dtypes]: https://github.com/stdlib-js/ndarray-dtypes
 
-[@stdlib/ndarray/orders]: https://github.com/stdlib-js/ndarray-orders/tree/esm
+[@stdlib/ndarray/orders]: https://github.com/stdlib-js/ndarray-orders
 
 <!-- <related-links> -->
 
-[@stdlib/ndarray/filter]: https://github.com/stdlib-js/ndarray-filter/tree/esm
+[@stdlib/ndarray/filter]: https://github.com/stdlib-js/ndarray-filter
 
-[@stdlib/ndarray/map]: https://github.com/stdlib-js/ndarray-map/tree/esm
+[@stdlib/ndarray/map]: https://github.com/stdlib-js/ndarray-map
 
-[@stdlib/ndarray/reject]: https://github.com/stdlib-js/ndarray-reject/tree/esm
+[@stdlib/ndarray/reject]: https://github.com/stdlib-js/ndarray-reject
 
-[@stdlib/ndarray/slice]: https://github.com/stdlib-js/ndarray-slice/tree/esm
+[@stdlib/ndarray/slice]: https://github.com/stdlib-js/ndarray-slice
 
 <!-- </related-links> -->
 
