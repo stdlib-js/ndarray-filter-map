@@ -48,7 +48,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import filterMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-filter-map@esm/index.mjs';
+import filterMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-filter-map@v0.1.1-esm/index.mjs';
 ```
 
 #### filterMap( x\[, options], fcn\[, thisArg] )
@@ -224,7 +224,7 @@ The callback function is provided the following arguments:
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@esm/index.mjs';
 import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@esm/index.mjs';
 import array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-array@esm/index.mjs';
-import filterMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-filter-map@esm/index.mjs';
+import filterMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-filter-map@v0.1.1-esm/index.mjs';
 
 function fcn( v ) {
     if ( v > 0 ) {
